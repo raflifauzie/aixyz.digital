@@ -77,6 +77,13 @@ body {
   border: 1px solid rgba(0, 255, 255, 0.4);
 }
 
+.plan:active {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
+              0 0 40px rgba(0, 255, 255, 0.4),
+              0 0 60px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.5);
+}
+
 .plan h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -202,5 +209,41 @@ body {
   .exchange-rate {
     font-size: 0.7rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .pricing-table {
+    gap: 0.8rem;
+  }
+
+  .plan {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .plan h2 {
+    font-size: 0.9rem;
+  }
+
+  .usd {
+    font-size: 0.8rem;
+  }
+
+  .exchange-rate {
+    font-size: 0.65rem;
   }
 }
