@@ -12,3 +12,8 @@ if (viewPricingButton) {
     }, 500); // Match the CSS transition duration
   });
 }
+
+// Remove fade-out class on page load
+window.addEventListener('pageshow', () => {
+  document.body.classList.remove('fade-out');
+});
