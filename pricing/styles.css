@@ -164,29 +164,39 @@ body {
   }
   
   @media (max-width: 480px) {
-    .title {
-      font-size: 1.5rem;
-    }
-  
-    .subtitle {
-      font-size: 0.75rem;
-      margin-bottom: 1rem;
-    }
-  
-    .plan {
+    .container {
       padding: 1rem;
     }
   
+    .pricing-table {
+      gap: 1rem;
+    }
+  
+    .plan {
+      width: 100%;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1.4rem;
+    }
+  
+    .subtitle {
+      font-size: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+  
     .plan h2 {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
   
     .usd {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   
     .exchange-rate {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
   }
-  
+
