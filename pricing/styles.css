@@ -66,18 +66,13 @@ body {
   backdrop-filter: blur(6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
 }
 
 .plan:hover,
-.plan:active {
+.plan:active,
+.plan:focus {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5),
-              0 0 30px rgba(0, 255, 255, 0.3),
-              0 0 45px rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.4);
-}
-
-.plan:active {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
               0 0 40px rgba(0, 255, 255, 0.4),
               0 0 60px rgba(0, 255, 255, 0.2);
@@ -182,9 +177,9 @@ body {
   }
 
   .plan {
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.8rem;
   }
 
   .title {
