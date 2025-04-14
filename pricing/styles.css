@@ -69,6 +69,9 @@ body.fade-out {
   position: relative;
   z-index: 2;
   transform: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
 }
 
 .title {
@@ -91,6 +94,7 @@ body.fade-out {
   align-items: stretch;
   margin: 2rem auto;
   max-width: 1200px;
+  flex: 1;
 }
 
 .plan-link {
@@ -162,7 +166,8 @@ body.fade-out {
 }
 
 .exchange-rate {
-  margin-top: 2rem;
+  margin-top: auto;
+  padding-top: 2rem;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
 }
