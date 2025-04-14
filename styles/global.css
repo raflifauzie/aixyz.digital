@@ -24,8 +24,6 @@ body {
   overflow: hidden;
   position: relative;
   animation: gradientMove 30s ease infinite;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
 }
 
 /* Prevent white flash during transitions */
