@@ -6,16 +6,9 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  background: radial-gradient(
-    circle at top left,
-    rgba(0, 0, 0, 0.8) 5%,
-    #080d19 25%,
-    #085ac4 50%,
-    #0c3378 75%,
-    #199ce4 90%,
-    #88dbe6 100%
-  );
-  background-size: 200% 200%;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +16,8 @@ body {
   font-family: "Chakra Petch", sans-serif;
   overflow: hidden;
   position: relative;
-  animation: gradientMove 30s ease infinite;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 
 /* Prevent white flash during transitions */
@@ -48,13 +42,13 @@ body.fade-out {
 
 @keyframes gradientMove {
   0% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }
 
