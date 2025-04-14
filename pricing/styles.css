@@ -117,11 +117,6 @@ body.fade-out {
   font-weight: bold;
 }
 
-.total-year {
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .exchange-rate {
   margin-top: 2rem;
   font-size: 0.9rem;
