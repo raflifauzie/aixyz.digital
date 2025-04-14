@@ -4,11 +4,11 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Chakra Petch", sans-serif;
   background: radial-gradient(
     circle at top left,
-    rgba(0, 0, 0, 0.8) 5%,
+    rgba(0, 0, 0, 0.8),
     #080d19 25%,
     #085ac4 50%,
     #0c3378 75%,
@@ -65,6 +65,10 @@ body.fade-out {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .title {
