@@ -1,89 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing - aixyz.digital</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pricing.css" />
 </head>
 
 <body>
-
-  <div class="logo">
-    <a href="/aixyz.digital/">aixyz.digital</a>
-  </div>
-
-  <style>
-    .logo {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-family: "Chakra Petch", sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-      z-index: 100;
-    }
-
-    .logo a {
-      color: white;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .logo {
-        font-size: 1.2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 1rem;
-      }
-    }
-
-    nav {
-      display: none;
-    }
-  </style>
-
   <div class="container">
     <h1 class="title">Select Plan</h1>
-    <p class="subtitle">Developed by our AI Agent </p>
+    <p class="subtitle">Developed by our AI Agent</p>
 
     <div class="pricing-table">
-      <a href="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentannualplan-2597-1" class="plan-link">
-        <div class="plan">
-          <h2>Annual Plan</h2>
-          <p class="usd">$51 /mo</p>
-          <p>IDR 850,000 /mo</p>
-          <p class="save">Save 35% vs 3 Month Plan</p>
-        </div>
-      </a>
-      <a href="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentmonthlyplan-2283-1" class="plan-link">
-        <div class="plan">
-          <h2>Monthly Plan</h2>
-          <p class="usd">$86 /mo</p>
-          <p>IDR 1,450,000 /mo</p>
-        </div>
-      </a>
-      <a href="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentquarterlyplan-1645-1" class="plan-link">
-        <div class="plan">
-          <h2>Quarterly Plan</h2>
-          <p class="usd">$68 /mo</p>
-          <p>IDR 1,150,000 /mo</p>
-          <p class="save">Save 26% vs Monthly Plan</p>
-        </div>
-      </a>
+      <div class="plan" data-link="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentannualplan-2597-1">
+        <h2>Annual Plan</h2>
+        <p class="usd">$51 /mo</p>
+        <p>IDR 850,000 /mo</p>
+        <p class="save">Save 35% vs 3 Month Plan</p>
+      </div>
+
+      <div class="plan" data-link="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentmonthlyplan-2283-1">
+        <h2>Monthly Plan</h2>
+        <p class="usd">$86 /mo</p>
+        <p>IDR 1,450,000 /mo</p>
+      </div>
+
+      <div class="plan" data-link="https://flip.id/pwf/$ilusinematik/#aixyzdigitalwebsitedesignwithaiagentquarterlyplan-1645-1">
+        <h2>Quarterly Plan</h2>
+        <p class="usd">$68 /mo</p>
+        <p>IDR 1,150,000 /mo</p>
+        <p class="save">Save 26% vs Monthly Plan</p>
+      </div>
     </div>
+
     <p class="exchange-rate">USD/IDR: Rp16,790.00</p>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('page-transition');
+      const plans = document.querySelectorAll('.plan');
+      plans.forEach(plan => {
+        const link = plan.getAttribute('data-link');
+        if (link) {
+          plan.addEventListener('click', () => {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+              window.location.href = link;
+            }, 500);
+          });
+        }
+      });
+    });
+
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        document.body.classList.remove('fade-out');
+        document.body.classList.add('page-transition');
+      }
+    });
+
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('fade-out');
+    });
+  </script>
 </body>
 
 </html>
