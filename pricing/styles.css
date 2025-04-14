@@ -81,28 +81,16 @@ body.fade-out {
 }
 
 .plan {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
-  padding: 2rem;
-  width: 300px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.plan:hover,
-.plan:focus {
+.plan:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
-              0 0 40px rgba(0, 255, 255, 0.4),
-              0 0 60px rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.5);
 }
 
 .plan h2 {

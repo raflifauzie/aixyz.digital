@@ -1,4 +1,4 @@
-console.log("Responsive design loaded.");
+// Simplified main.js to handle only essential functionality
 
 // Add page transition on load
 document.addEventListener("DOMContentLoaded", () => {
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Handle navigation transitions
 const viewPricingButton = document.querySelector(".order-btn");
-
 if (viewPricingButton) {
   viewPricingButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -16,7 +15,7 @@ if (viewPricingButton) {
       window.location.href = viewPricingButton.parentElement.href;
     }, 500);
   });
-}
+});
 
 // Handle back/forward cache
 window.addEventListener("pageshow", (event) => {
@@ -24,9 +23,4 @@ window.addEventListener("pageshow", (event) => {
     document.body.classList.remove("fade-out");
     document.body.classList.add("page-transition");
   }
-});
-
-// Handle page unload
-window.addEventListener("beforeunload", () => {
-  document.body.classList.add("fade-out");
 });
