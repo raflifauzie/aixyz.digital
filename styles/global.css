@@ -6,9 +6,17 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
-  background-size: 300% 300%;
-  animation: gradientMove 10s ease infinite;
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.8) 5%,
+    #080d19 25%,
+    #085ac4 50%,
+    #0c3378 75%,
+    #199ce4 90%,
+    #88dbe6 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientMove 30s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,13 +50,13 @@ body.fade-out {
 
 @keyframes gradientMove {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 
