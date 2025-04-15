@@ -87,10 +87,31 @@ body.fade-out {
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease;
+  position: relative;
+}
+
+.plan::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .plan:hover {
   transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.plan button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  aria-label: "Select Plan";
 }
 
 .plan h2 {
@@ -181,30 +202,34 @@ body.fade-out {
 
 @media (max-width: 480px) {
   .pricing-table {
-    gap: 1rem;
-    padding: 1rem;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    padding: 0; /* Remove extra padding */
+    margin: 0 auto; /* Center align the table */
+    width: 100%; /* Ensure full width */
   }
 
   .plan {
-    padding: 1rem;
+    padding: 0.8rem;
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     margin: 0 auto;
+    max-width: 280px; /* Slightly reduce max-width for better centering */
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
   .subtitle {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
     text-align: center;
   }
 
   .exchange-rate {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-align: center;
   }
 }
