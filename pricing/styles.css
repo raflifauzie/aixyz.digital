@@ -120,6 +120,18 @@ body.fade-out {
   color: white;
 }
 
+/* Update glowing effect to match 'aixyz.digital' text */
+.plan:active h2 {
+  color: #ffd700; /* Glowing yellow color */
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  transition: text-shadow 0.3s ease;
+}
+
+.plan:active {
+  backdrop-filter: blur(6px); /* Keep glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15); /* Slightly enhance background */
+}
+
 .usd {
   font-size: 1.2rem;
   color: #ffd700;
